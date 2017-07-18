@@ -2,6 +2,12 @@ pipeline {
     agent any 
 
     stages {
+        stage('Info') { 
+            steps { 
+                sh 'echo Info'
+                mvn --version
+            }
+        }
         stage('Build') { 
             steps { 
                 sh 'echo Build'
